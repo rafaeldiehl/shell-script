@@ -7,37 +7,32 @@
 #  Expressão regular para números reais positivos.
 regex='^[0-9]+\.?[0-9]*$'
 
+#  Estruturas if que verificam se a nota recebida é um número positivo entre 0 e 10.
+#  Caso não seja, o programa encerra.
+#  Obs: O operador =~ é usado  para testar uma variável em relação a uma expressão regular.
+validacao() {
+  if ! [[ $1 =~ $regex ]] ; then
+    echo "erro: A nota deve ser um número positivo" ; exit 1
+  fi
+
+  if (( $(echo "$1 > 10" | bc -l) || $(echo "$1 < 0" | bc -l) )) ; then
+    echo "erro: A nota deve estar numa escala 0-10" ; exit 1
+  fi
+}
+
 #  Leitura da primeira nota.
 echo -n "Informe a primeira nota e pressione [ENTER]: "
 read nota1;
 
-#  Estrutura if que verifica se a primeira variável recebida é um número positivo.
-#  Se não for, o programa encerra.
-if ! [[ $nota1 =~ $regex ]] ; then
-  echo "erro: A nota deve ser um número positivo" ; exit 1
-fi
-
-#  Estrutura if que verifica se a primeira variável está na escala 0-10.
-#  Se não for, o programa encerra.
-if (( $(echo "$nota1 > 10" | bc -l) || $(echo "$nota1 < 0" | bc -l) )) ; then
-  echo "erro: A nota deve estar numa escala 0-10" ; exit 1
-fi
+#  Validação da primeira nota.
+validacao $nota1;
 
 #  Leitura da segunda nota.
 echo -n "Informe a segunda nota e pressione [ENTER]: "
 read nota2;
 
-#  Estrutura if que verifica se a segunda variável recebida é um número positivo.
-#  Se não for, o programa encerra.
-if ! [[ $nota2 =~ $regex ]] ; then
-  echo "erro: A nota deve ser um número positivo" ; exit 1
-fi
-
-#  Estrutura if que verifica se a segunda variável está na escala 0-10.
-#  Se não for, o programa encerra.
-if (( $(echo "$nota2 > 10" | bc -l) || $(echo "$nota2 < 0" | bc -l) )) ; then
-  echo "erro: A nota deve estar numa escala 0-10" ; exit 1
-fi
+#  Validação da segunda nota.
+validacao $nota2;
 
 #  Cálculo da média das duas notas.
 media=$(echo "scale=2;($nota1+$nota2)/2" | bc)
