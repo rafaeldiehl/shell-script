@@ -1,4 +1,5 @@
 #!/bin/bash
+#  Recebe dois números inteiros e realiza as quatro operações matemáticas básicas.
 #  Primeiramente, dê permissão de execução para o arquivo:
 #  > sudo chmod +x calculo.sh
 #  Em seguida, execute-o:

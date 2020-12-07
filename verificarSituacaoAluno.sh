@@ -1,4 +1,5 @@
 #!/bin/bash
+#  Recebe duas notas, calcula a média e verifica se o(a) aluno(a) foi aprovado(a), reprovado(a) ou está em recuperação.
 #  Primeiramente, dê permissão de execução para o arquivo:
 #  > sudo chmod +x verificarSituacaoAluno.sh
 #  Em seguida, execute-o:
