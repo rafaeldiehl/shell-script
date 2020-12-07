@@ -1,9 +1,9 @@
 #!/bin/bash
 #  Recebe três valores A, B e C, e informa se a soma de A com B é menor, maior ou igual a C.
 #  Primeiramente, dê permissão de execução para o arquivo:
-#  > sudo chmod +x calcularSoma.sh
+#  > sudo chmod +x calculaSoma.sh
 #  Em seguida, execute-o:
-#  > ./calcularSoma.sh <numero1> <numero2> <numero3>
+#  > ./calculaSoma.sh <numero1> <numero2> <numero3>
 
 #  Expressão regular para números reais.
 regex='^[-+]?[0-9]+\.?[0-9]*$'
