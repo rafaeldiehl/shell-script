@@ -23,12 +23,12 @@ if ! [[ $1 =~ $regex ]] ; then
 fi
 
 #  Laço de repetição que verifica se o item é um diretório, arquivo ou nenhum dos dois. Após a verificação, a exibe como saída para o usuário.
-for i in $1/*
+for i in $(ls $1)
 do
   echo -n "O item $i é "
-  if [[ -d $i ]]; then
+  if [[ -d $1/$i ]]; then
     echo "um diretório"
-  elif [[ -f $i ]]; then
+  elif [[ -f $1/$i ]]; then
     echo "um arquivo"
   else
     echo "diferente de um diretório ou arquivo"
