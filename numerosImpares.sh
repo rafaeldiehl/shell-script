@@ -3,7 +3,7 @@
 #  Primeiramente, dê permissão de execução para o arquivo:
 #  > sudo chmod +x numerosImpares.sh
 #  Em seguida, execute-o:
-#  > ./numerosImpares
+#  > ./numerosImpares.sh
 
 #  Iterador que se inicia como zero, por se tratar de números naturais
 i=0
