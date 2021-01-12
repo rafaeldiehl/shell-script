@@ -5,13 +5,13 @@
 #  Em seguida, execute-o:
 #  > ./numerosImpares.sh
 
-#  Iterador que se inicia como zero, por se tratar de números naturais
+#  Varíavel de controle que se inicia como zero, por se tratar de números naturais
 i=0
 
 #  Quantidade de números ímpares naturais que será exibida
 quant=10
 
-#  Loop until que para quando o iterador é igual ao dobro da quantidade de números ímpares,
+#  Loop until que para quando o varíavel de controle é igual ao dobro da quantidade de números ímpares,
 #  pois ele também assumirá valores pares no meio do processo
 until [ $i -eq $(( $quant * 2 )) ]
 do

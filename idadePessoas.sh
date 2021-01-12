@@ -20,7 +20,7 @@ idadeTotal=0
 idadeMasc=0
 idadeFem=0
 
-#  Iterador que se inicia como zero
+#  Varíavel de controle que se inicia como zero
 i=0
 
 #  Expressões regulares para os dados
